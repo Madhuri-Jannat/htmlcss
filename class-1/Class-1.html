@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | Madhurima</title>
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --primary: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(120deg, #020617, #0f172a);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .hero span {
+      color: var(--primary);
+    }
+
+    .hero p {
+      max-width: 500px;
+      color: var(--muted);
+      margin: 20px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--primary);
+      color: #020617;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    /* Cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      background-color: #38bdf8;
+      padding: 25px;
+      border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    /* Skills */
+    .skill {
+      margin-bottom: 15px;
+    }
+
+    .bar {
+      background: #020617;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 6px;
+    }
+
+    .bar span {
+      display: block;
+      height: 10px;
+      background: var(--primary);
+      width: 0;
+      animation: load 1.5s forwards;
+    }
+
+    @keyframes load {
+      to { width: var(--level); }
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: var(--muted);
+      background: #020617;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Hi, I'm <span>Madhurima</span></h1>
+    <p>
+      A passionate developer creating clean, modern, and efficient web experiences
+      without unnecessary complexity.
+    </p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
+
+  <!-- About -->
+  <section>
+    <h2>About Me</h2>
+    <p style="max-width: 700px; color: var(--muted);">
+      I specialize in building responsive, user-focused applications using modern
+      web technologies. I enjoy solving problems and turning ideas into reality.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section>
+    <h2>Skills</h2>
+    <div class="skill">
+      HTML & CSS
+      <div class="bar"><span style="--level: 90%"></span></div>
+    </div>
+    <div class="skill">
+      JavaScript
+      <div class="bar"><span style="--level: 80%"></span></div>
+    </div>
+    <div class="skill">
+      React
+      <div class="bar"><span style="--level: 70%"></span></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Project One</h3>
+        <p>A minimalist web app focused on performance and accessibility.</p>
+      </div>
+      <div class="card">
+        <h3>Project Two</h3>
+        <p>A responsive landing page built with clean UI principles.</p>
+      </div>
+      <div class="card">
+        <h3>Project Three</h3>
+        <p>An interactive dashboard using modern JavaScript.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section>
+    <h2>Contact</h2>
+    <p style="color: var(--muted);">
+      Email: yourname@email.com <br/>
+      GitHub: github.com/yourname <br/>
+      LinkedIn: linkedin.com/in/yourname
+    </p>
+  </section>
+
+  <footer>
+    © 2026 Madhurima. All rights reserved.
+  </footer>
+
+</body>
+</html>
